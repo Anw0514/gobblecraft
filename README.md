@@ -12,6 +12,11 @@ This project utilizes functional components and hooks. There is no redux, as the
 - `src/App/AppStyles.jsx` component-specific styles created through styled-components
 
 
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

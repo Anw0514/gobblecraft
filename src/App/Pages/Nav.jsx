@@ -1,16 +1,38 @@
 import React from 'react'
+import { useScrollSection, useScrollSections } from "react-scroll-section";
+
 import { NavDiv, NavButton } from '../AppStyles';
 
 export default function Nav({ iw, sp, ih }) {
-
+	const aboutSection = useScrollSection('About');
+	const gallerySection = useScrollSection('Gallery');
+	const discordSection = useScrollSection('Discord');
 	const onHome = sp < ih - 20
 
   return (
 		<NavDiv iw={iw} onHome={onHome}>
 			<div>
-				<NavButton onHome={onHome}>About</NavButton>
-				<NavButton onHome={onHome}>Gallery</NavButton>
-				<NavButton onHome={onHome}>Discord</NavButton>
+				<NavButton
+					onClick={aboutSection.onClick}
+					selected={aboutSection.selected}
+					onHome={onHome}
+				>
+					About
+				</NavButton>
+				<NavButton
+					onClick={gallerySection.onClick}
+					selected={gallerySection.selected}
+					onHome={onHome}
+				>
+					Gallery
+				</NavButton>
+				<NavButton
+					onClick={discordSection.onClick}
+					selected={discordSection.selected}
+					onHome={onHome}
+				>
+					Discord
+				</NavButton>
 				<NavButton onHome={onHome}>Contact</NavButton>
 			</div>
 		</NavDiv>

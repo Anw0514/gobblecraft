@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { AppDiv } from './AppStyles';
 import { BrowserRouter as Router } from "react-router-dom";
+import { ScrollingProvider, Section } from "react-scroll-section";
 
 import Home from './Pages/Home';
 import Nav from './Pages/Nav';
@@ -29,10 +30,18 @@ function App() {
   return (
 		<Router>
 			<AppDiv>
-				<Nav iw={innerWidth} sp={scrollPosition} ih={innerHeight} />
-				<Home iw={innerWidth} />
-				<Gallery iw={innerWidth} />
-				<Discord iw={innerWidth} />
+				<ScrollingProvider>
+					<Nav iw={innerWidth} sp={scrollPosition} ih={innerHeight} />
+					<Section id="Home">
+						<Home iw={innerWidth} />
+					</Section>
+					<Section id="Gallery">
+						<Gallery iw={innerWidth} />
+					</Section>
+					<Section id="Discord">
+						<Discord iw={innerWidth} />
+					</Section>
+				</ScrollingProvider>
 			</AppDiv>
 		</Router>
 	);
