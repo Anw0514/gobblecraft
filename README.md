@@ -1,3 +1,17 @@
+# GobbleCraft Official Website
+
+This project utilizes functional components and hooks. There is no redux, as the necessary state is minimal. 
+
+### Packages Used
+- [react-awesome-slider](https://www.npmjs.com/package/react-awesome-slider)
+- [styled-components](https://www.npmjs.com/package/styled-components)
+- [AWS](aws.amazon.com)
+
+### CSS FILES
+- `src/assets/index.css` font declaration and default styling for body & html
+- `src/App/AppStyles.jsx` component-specific styles created through styled-components
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

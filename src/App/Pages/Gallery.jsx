@@ -43,7 +43,7 @@ export default function Gallery({ iw }) {
   return (
     <GalleryDiv w={iw}>
       <h1>Server Gallery</h1>
-      <AwesomeSlider media={imgSrces} loader-bar-color="blue" />
+      <AwesomeSlider media={imgSrces} />
     </GalleryDiv>
   )
 }
