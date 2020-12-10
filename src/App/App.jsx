@@ -40,7 +40,7 @@ function App() {
 						<Gallery iw={innerWidth} />
 					</Section>
 					<Section id='Dynmap'>
-						<Dynmap iw={innerWidth} />
+						<Dynmap iw={innerWidth} ih={innerHeight} />
 					</Section>
 					<Section id='Contact'>
 						<Contact iw={innerWidth} />

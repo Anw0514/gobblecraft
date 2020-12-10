@@ -8,12 +8,21 @@ export const AppDiv = styled.div`
 `;
 
 // NAV STYLES
+export const NavLogoImg = styled.img`
+	position: fixed;
+	top: 15px;
+	left: 20px;
+	width: 200px;
+
+
+
+`;
 
 export const NavDiv = styled.div`
 	position: fixed;
 	width: ${({ iw }) => iw - 40 + "px"};
 	padding: 20px;
-	text-align: right;
+	text-align: ${({ iw }) => iw > 600 ? `right`: `center` };
 	text-transform: uppercase;
 	color: ${({ onHome }) => onHome ? 'white' : stone};
 	z-index: 100;
@@ -148,9 +157,7 @@ export const ContactDiv = styled.div`
 
 
 // TODO by end of day 11/2: 
-// - switch dynmap and contact background colors
-// - add gobblecraft logo to navbar
-// - add description to gallery images
+// - write and add description to gallery images
 // - add dynmap and discord links to home buttons
 // - fix navbar to have proper menu items
 // - create email for aws and start s3 bucket deployment

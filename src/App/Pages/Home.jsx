@@ -12,8 +12,8 @@ export default function Home({ iw }) {
       : <h1>GobbleCraft</h1> }
 			<h2>The Official Virginia Tech Minecraft Server</h2>
 			<HomeButtons>
-				<HomeLink href='https://map.blockeley.com/'>Dynmap</HomeLink>
-				<HomeLink href='google.com'>Discord</HomeLink>
+				<HomeLink href='http://51.161.71.93:6969/'>Dynmap</HomeLink>
+				<HomeLink href='https://discord.gg/w6p4NcabKc'>Discord</HomeLink>
 			</HomeButtons>
 		</HomeDiv>
 	);
