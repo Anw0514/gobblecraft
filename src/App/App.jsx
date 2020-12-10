@@ -7,6 +7,7 @@ import Home from './Pages/Home';
 import Nav from './Pages/Nav';
 import Discord from './Pages/Discord';
 import Gallery from './Pages/Gallery';
+import Contact from './Pages/Contact';
 
 function App() {
 	const [innerWidth, setInnerWidth] = useState(window.innerWidth);
@@ -32,14 +33,17 @@ function App() {
 			<AppDiv>
 				<ScrollingProvider>
 					<Nav iw={innerWidth} sp={scrollPosition} ih={innerHeight} />
-					<Section id="Home">
+					<Section id='Home'>
 						<Home iw={innerWidth} />
 					</Section>
-					<Section id="Gallery">
+					<Section id='Gallery'>
 						<Gallery iw={innerWidth} />
 					</Section>
-					<Section id="Discord">
+					<Section id='Discord'>
 						<Discord iw={innerWidth} />
+					</Section>
+					<Section id='Contact'>
+						<Contact iw={innerWidth} />
 					</Section>
 				</ScrollingProvider>
 			</AppDiv>

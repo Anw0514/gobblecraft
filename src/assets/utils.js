@@ -32,3 +32,12 @@ export const dynamicPadding = (w, size) => {
   const totalPad = w - dynamicWidth(w, size);
   return totalPad / 2;
 };
+
+export const [ maroon, stone, burnt, orange, white, smoke ] = [
+	"#861F41",
+	"#75787b",
+	"#C64600",
+	"#E87722",
+	"#FFFFFF",
+	"#E5E1E6",
+];

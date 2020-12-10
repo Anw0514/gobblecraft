@@ -6,13 +6,10 @@ export default function Discord({ iw }) {
   return (
 		<DiscordDiv>
 			<iframe
-        title='Discord'
-				src='https://discordapp.com/widget?id=597211827037929472&theme=dark'
-				width={dynamicWidth(iw)}
+				title='Dynmap'
+				src='http://51.161.71.93:6969/'
+				width={dynamicWidth(iw, 'large')}
 				height='500'
-				allowtransparency='true'
-				frameBorder='0'
-				sandbox='allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts'
 			></iframe>
 		</DiscordDiv>
 	);

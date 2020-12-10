@@ -1,5 +1,5 @@
 import React from 'react'
-import { useScrollSection, useScrollSections } from "react-scroll-section";
+import { useScrollSection } from "react-scroll-section";
 
 import { NavDiv, NavButton } from '../AppStyles';
 
@@ -7,6 +7,7 @@ export default function Nav({ iw, sp, ih }) {
 	const aboutSection = useScrollSection('About');
 	const gallerySection = useScrollSection('Gallery');
 	const discordSection = useScrollSection('Discord');
+	const contactSection = useScrollSection('Contact');
 	const onHome = sp < ih - 20
 
   return (
@@ -33,7 +34,13 @@ export default function Nav({ iw, sp, ih }) {
 				>
 					Discord
 				</NavButton>
-				<NavButton onHome={onHome}>Contact</NavButton>
+				<NavButton
+					onClick={contactSection.onClick}
+					selected={contactSection.selected}
+					onHome={onHome}
+				>
+					Contact
+				</NavButton>
 			</div>
 		</NavDiv>
 	);

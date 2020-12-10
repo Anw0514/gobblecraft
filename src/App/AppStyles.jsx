@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { dynamicPadding } from '../assets/utils';
+import { dynamicPadding, maroon, smoke, burnt, orange, white, stone } from "../assets/utils";
 
 export const AppDiv = styled.div`
-	background-color: #e5e1e6;
+	background-color: ${smoke};
 	min-height: 100vh;
 	text-align: center;
 `;
@@ -15,7 +15,7 @@ export const NavDiv = styled.div`
 	padding: 20px;
 	text-align: right;
 	text-transform: uppercase;
-	color: ${({ onHome }) => onHome ? 'white' : '#861f41'};
+	color: ${({ onHome }) => onHome ? 'white' : stone};
 	z-index: 100;
 `;
 
@@ -46,7 +46,7 @@ export const NavButton = styled.a`
 	&:hover:after,
 	&:hover:before {
 		backface-visibility: hidden;
-		border-color: ${({ onHome }) => onHome ? 'white' : '#861f41'};
+		border-color: ${({ onHome }) => onHome ? white : stone};
 		transition: width 350ms ease-in-out;
 		width: 80px;
 	}
@@ -56,7 +56,7 @@ export const NavButton = styled.a`
 
 export const HomeDiv = styled.div`
 	height: 100vh;
-	background-color: #e5e1e6;
+	background-color: ${smoke};
 	background-image: url(${({ img }) => img});
 	background-size: cover;
 	padding-left: ${({ iw }) => dynamicPadding(iw) + "px"};
@@ -89,13 +89,13 @@ export const HomeLink = styled.a`
 	text-transform: uppercase;
 	text-decoration: none;
 	padding: 10px 20px;
-	border: 4px solid #861f41 !important;
+	border: 4px solid ${maroon} !important;
 	display: inline-block;
 	transition: all 0.4s ease 0s;
 
 	&:hover {
-		background: #861f41;
-		border-color: #861f41 !important;
+		background: ${maroon};
+		border-color: ${maroon} !important;
 		transition: all 0.4s ease 0s;
 	}
 `;
@@ -110,19 +110,19 @@ export const HomeButtons = styled.div`
 // GALLERY STYLES
 
 export const GalleryDiv = styled.div`
-	padding: 4rem ${({ w }) => dynamicPadding(w, "large")}px 6rem;
-	color: #861f41;
+	padding: 4rem ${({ w }) => dynamicPadding(w)}px 6rem;
+	color: ${maroon};
 
 	h1 {
 		margin-top: 0;
 	}
 
 	.awssld {
-		--organic-arrow-color: #861f41;
-		--loader-bar-color: #861f41;
+		--organic-arrow-color: ${maroon};
+		--loader-bar-color: ${maroon};
 		--organic-arrow-thickness: 6px;
-		--control-bullet-color: #e87722;
-		--control-bullet-active-color: #c64600;
+		--control-bullet-color: ${orange};
+		--control-bullet-active-color: ${burnt};
 		--control-button-opacity: 0.8;
 		--slider-height-percentage: 55%;
 	}
@@ -134,3 +134,31 @@ export const DiscordDiv = styled.div`
 	padding-top: 3rem;
 	padding-bottom: 3rem;
 `;
+
+// CONTACT STYLES
+
+export const ContactDiv = styled.div`
+	background-color: ${burnt};
+	color: ${smoke};
+	padding: 4rem ${({ iw }) => dynamicPadding(iw, "large")}px 3rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+`;
+
+
+// TODO by end of day 11/2: 
+// - switch dynmap and contact background colors
+// - add gobblecraft logo to navbar
+// - add description to gallery images
+// - add dynmap and discord links to home buttons
+// - fix navbar to have proper menu items
+// - create email for aws and start s3 bucket deployment
+// - message David about domain name and aws hosting
+
+// TODO by end of day 11/3:
+// - figure out information and styling for contact section
+// - add router dom functionality
+// - make styling mobile friendly
+// - add react-fade-in
+// - final touches
