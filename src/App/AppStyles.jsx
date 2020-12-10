@@ -24,7 +24,7 @@ export const NavDiv = styled.div`
 	padding: 20px;
 	text-align: ${({ iw }) => iw > 600 ? `right`: `center` };
 	text-transform: uppercase;
-	color: ${({ onHome }) => onHome ? 'white' : stone};
+	color: ${({ onHome }) => onHome ? 'white' : `black`};
 	z-index: 100;
 `;
 
@@ -151,15 +151,13 @@ export const ContactDiv = styled.div`
 	color: ${smoke};
 	padding: 4rem ${({ iw }) => dynamicPadding(iw, "large")}px 3rem;
 	display: flex;
-	flex-direction: row;
+	flex-direction: ${({iw}) => iw > 900 ? `row` : `column`};
 	justify-content: space-between;
 `;
 
 
 // TODO by end of day 11/2: 
 // - write and add description to gallery images
-// - add dynmap and discord links to home buttons
-// - fix navbar to have proper menu items
 // - create email for aws and start s3 bucket deployment
 // - message David about domain name and aws hosting
 
