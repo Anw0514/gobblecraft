@@ -5,7 +5,7 @@ import { ScrollingProvider, Section } from "react-scroll-section";
 
 import Home from './Pages/Home';
 import Nav from './Pages/Nav';
-import Discord from './Pages/Discord';
+import Dynmap from './Pages/Dynmap';
 import Gallery from './Pages/Gallery';
 import Contact from './Pages/Contact';
 
@@ -39,8 +39,8 @@ function App() {
 					<Section id='Gallery'>
 						<Gallery iw={innerWidth} />
 					</Section>
-					<Section id='Discord'>
-						<Discord iw={innerWidth} />
+					<Section id='Dynmap'>
+						<Dynmap iw={innerWidth} />
 					</Section>
 					<Section id='Contact'>
 						<Contact iw={innerWidth} />

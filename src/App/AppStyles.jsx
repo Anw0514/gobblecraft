@@ -128,9 +128,9 @@ export const GalleryDiv = styled.div`
 	}
 `;
 
-// DISCORD STYLES
+// DYNMAP STYLES
 
-export const DiscordDiv = styled.div`
+export const DynmapDiv = styled.div`
 	padding-top: 3rem;
 	padding-bottom: 3rem;
 `;
